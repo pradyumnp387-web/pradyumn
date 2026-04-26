@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-zinc-950: #09090b;
+}
+
+body {
+  @apply antialiased;
+  background-color: var(--color-zinc-950);
+  color: theme("colors.zinc.100");
+}
+
+.glass-panel {
+  @apply bg-black/40 backdrop-blur-xl border-white/10;
+}
+
+.frosted-card {
+  @apply bg-white/5 border border-white/10 rounded-2xl backdrop-blur-sm shadow-sm;
+}
+
+.shadow-glow {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+.input-container {
+  @apply bg-zinc-900/80 border border-white/10 rounded-2xl backdrop-blur-md;
+}
+
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  @apply bg-white/20;
+}
+
+/* Markdown styling */
+.prose pre {
+  @apply bg-black/40 border border-white/10 rounded-xl p-4 font-mono text-xs overflow-x-auto my-4;
+}
+
+.prose code {
+  @apply bg-white/10 text-zinc-300 px-1.5 py-0.5 rounded font-mono text-[0.9em];
+}
+
+.prose p {
+  @apply leading-relaxed mb-4 last:mb-0 text-zinc-300;
+}
+
+.prose strong {
+  @apply text-white font-semibold;
+}
+
+.prose ul, .prose ol {
+  @apply my-4 space-y-2;
+}
+
+.prose li {
+  @apply pl-1 text-zinc-300;
+}
+
+.prose blockquote {
+  @apply border-l-2 border-white/20 pl-4 italic text-zinc-400 my-4;
+}

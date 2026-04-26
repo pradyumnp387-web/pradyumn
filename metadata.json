@@ -1,0 +1,6 @@
+{
+  "name": "SHIRBHATE::CORE",
+  "description": "A futuristic, high-performance AI assistant featuring real-time translation, dynamic personas, and a polished dark-mode interface.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["AI Chat", "Language Translation"]
+}
